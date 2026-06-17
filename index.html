@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>運動療育むーん｜大阪市都島区の児童発達支援・放課後等デイサービス</title>
+<meta name="description" content="運動療育むーんは、大阪市都島区の児童発達支援・放課後等デイサービスです。オリンピアンをはじめとするアスリートスタッフが、運動を通じてお子さんの成長をサポートします。">
+<meta property="og:title" content="運動療育むーん｜大阪市都島区の児童発達支援・放課後等デイサービス">
+<meta property="og:description" content="アスリートから学ぼう！運動に特化した療育で、お子さんの「できた！」を増やします。">
+<meta property="og:url" content="https://www.et-moon.com">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://www.et-moon.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --yellow: #FFE566;
+  --yellow-d: #F5D800;
+  --orange: #FF8C42;
+  --teal: #3BBFAD;
+  --teal-d: #2FA090;
+  --red: #E8401C;
+  --blue: #4A90D9;
+  --white: #FFFFFF;
+  --bg: #FFFDF0;
+  --text: #333333;
+  --text-light: #666666;
+  --radius: 16px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 200px;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.7;
+}
+
+/* ===== HEADER ===== */
+.header {
+  background: var(--yellow);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-main {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 32px 12px;
+}
+
+.header-left {
+  flex-shrink: 0;
+}
+
+.header-center {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.header-subtitle {
+  font-size: 13px;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.header-name {
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--teal-d);
+  line-height: 1.2;
+}
+
+.header-recruit {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--red);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.header-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.header-btn {
+  display: inline-block;
+  padding: 5px 14px;
+  border: 2px solid var(--blue);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--blue);
+  text-decoration: none;
+  background: white;
+  transition: all 0.2s;
+  white-space: nowrap;
+  min-width: 200px;
+  text-align: center;
+}
+
+.header-btn:hover {
+  background: var(--blue);
+  color: white;
+}
+
+.header-hours {
+  font-size: 12px;
+  color: var(--text);
+  line-height: 1.6;
+  text-align: right;
+}
+
+.header-hours .note {
+  color: var(--red);
+  font-size: 11px;
+}
+
+/* NAV (inside header, yellow bg) */
+.nav {
+  background: var(--yellow);
+  border-top: 1px solid rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  overflow-x: auto;
+  padding: 0 32px;
+}
+
+.nav a {
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.nav a:hover {
+  background: rgba(0,0,0,0.06);
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: url('img/interior-02.jpg') center/cover no-repeat;
+  padding: 60px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 253, 230, 0.82);
+  z-index: 0;
+}
+
+.hero::after {
+  display: none;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-catch {
+  display: inline-block;
+  background: var(--teal);
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  letter-spacing: 0.05em;
+}
+
+.hero-title {
+  font-size: clamp(28px, 6vw, 52px);
+  font-weight: 900;
+  line-height: 1.3;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.hero-title span {
+  color: var(--teal-d);
+}
+
+.hero-desc {
+  font-size: 16px;
+  color: var(--text-light);
+  max-width: 560px;
+  margin: 0 auto 32px;
+}
+
+.hero-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 36px;
+}
+
+.hero-tag {
+  background: white;
+  border: 2px solid var(--teal);
+  color: var(--teal-d);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+
+.hero-btns {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--red);
+  color: white;
+  font-size: 17px;
+  font-weight: 900;
+  padding: 16px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(232,64,28,0.35);
+  transition: all 0.2s;
+  letter-spacing: 0.05em;
+}
+
+.btn-primary:hover {
+  background: #c93518;
+  transform: translateY(-2px);
+}
+
+.btn-line {
+  display: inline-block;
+  background: #06C755;
+  color: white;
+  font-size: 17px;
+  font-weight: 900;
+  padding: 16px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(6,199,85,0.35);
+  transition: all 0.2s;
+}
+
+.btn-line:hover {
+  background: #05a848;
+  transform: translateY(-2px);
+}
+
+.hero-hours {
+  margin-top: 24px;
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+/* ===== SECTION ===== */
+section {
+  padding: 64px 24px;
+}
+
+.section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-label {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  letter-spacing: 0.08em;
+}
+
+.section-title {
+  font-size: clamp(22px, 4vw, 32px);
+  font-weight: 900;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.section-desc {
+  color: var(--text-light);
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+
+/* ===== PAIN (共感セクション) ===== */
+.pain {
+  background: white;
+}
+
+.pain-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.pain-card {
+  background: #FFF9E6;
+  border: 2px solid var(--yellow-d);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.pain-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.pain-text {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.pain-answer {
+  background: linear-gradient(135deg, #E8F8F5, #D4F2EE);
+  border-radius: var(--radius);
+  padding: 32px;
+  text-align: center;
+  border: 2px solid var(--teal);
+}
+
+.pain-answer-title {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--teal-d);
+  margin-bottom: 12px;
+}
+
+.pain-answer-text {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ===== FEATURES ===== */
+.features {
+  background: var(--bg);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  border-top: 4px solid var(--teal);
+  transition: transform 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+}
+
+.feature-num {
+  display: inline-block;
+  background: var(--teal);
+  color: white;
+  font-size: 11px;
+  font-weight: 900;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.feature-title {
+  font-size: 16px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.feature-desc {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* ===== PROGRAM ===== */
+.program {
+  background: white;
+}
+
+.program-flow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.program-step {
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.program-step-num {
+  width: 40px;
+  height: 40px;
+  background: var(--teal);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 900;
+  margin: 0 auto 12px;
+}
+
+.program-step-title {
+  font-size: 15px;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+
+.program-step-desc {
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+.five-domains {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.domain-item {
+  background: linear-gradient(135deg, var(--teal), var(--teal-d));
+  color: white;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.domain-icon {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+/* ===== STAFF ===== */
+.staff {
+  background: var(--bg);
+}
+
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.staff-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.staff-avatar {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--yellow), var(--orange));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+
+.staff-role {
+  display: inline-block;
+  background: var(--yellow);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.staff-name {
+  font-size: 17px;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+
+.staff-name-ruby {
+  font-size: 11px;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.staff-desc {
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.staff-highlight {
+  display: inline-block;
+  background: #FFF3CD;
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #856404;
+  margin-top: 8px;
+}
+
+/* ===== FEE ===== */
+.fee {
+  background: white;
+}
+
+.fee-box {
+  background: linear-gradient(135deg, #E8F8F5, #D4F2EE);
+  border-radius: var(--radius);
+  padding: 32px;
+  margin-bottom: 24px;
+  border: 2px solid var(--teal);
+}
+
+.fee-highlight {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--teal-d);
+  margin: 8px 0;
+}
+
+.fee-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+  font-size: 14px;
+}
+
+.fee-table th {
+  background: var(--teal);
+  color: white;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 700;
+}
+
+.fee-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.fee-table tr:nth-child(even) td {
+  background: #F5F5F5;
+}
+
+.fee-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.fee-step {
+  background: white;
+  border: 2px solid var(--yellow-d);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.fee-step-num {
+  display: inline-block;
+  background: var(--orange);
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  line-height: 32px;
+  font-weight: 900;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.fee-step-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.fee-step-desc {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+/* ===== ACCESS ===== */
+.access {
+  background: var(--bg);
+}
+
+.access-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (max-width: 640px) {
+  .access-grid { grid-template-columns: 1fr; }
+}
+
+.access-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.access-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.access-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--teal);
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.access-detail strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.access-detail p {
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.access-map {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.access-map iframe {
+  width: 100%;
+  height: 280px;
+  border: none;
+  display: block;
+}
+
+/* ===== CTA ===== */
+.cta {
+  background: linear-gradient(135deg, var(--teal) 0%, var(--teal-d) 100%);
+  color: white;
+  text-align: center;
+  padding: 80px 24px;
+}
+
+.cta-title {
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 900;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.cta-desc {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 40px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-btns {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.btn-white {
+  display: inline-block;
+  background: white;
+  color: var(--teal-d);
+  font-size: 17px;
+  font-weight: 900;
+  padding: 16px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  transition: all 0.2s;
+}
+
+.btn-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+}
+
+.btn-line-w {
+  display: inline-block;
+  background: #06C755;
+  color: white;
+  font-size: 17px;
+  font-weight: 900;
+  padding: 16px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  transition: all 0.2s;
+}
+
+.btn-line-w:hover {
+  transform: translateY(-2px);
+}
+
+.cta-note {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #222;
+  color: #aaa;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.footer-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.footer-name {
+  font-size: 18px;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.footer-info {
+  font-size: 13px;
+  line-height: 2;
+}
+
+.footer-info a {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.footer-copy {
+  margin-top: 24px;
+  font-size: 12px;
+  border-top: 1px solid #333;
+  padding-top: 16px;
+}
+
+/* ===== FLOATING CTA ===== */
+.float-cta {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 200;
+}
+
+.float-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--red);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 900;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  transition: all 0.2s;
+}
+
+.float-btn:hover {
+  transform: translateY(-2px);
+}
+
+.float-btn.line {
+  background: #06C755;
+}
+
+/* ===== 5 DOMAINS DETAIL ===== */
+.domains-detail {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.domain-card {
+  background: white;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border-top: 4px solid var(--teal);
+}
+
+.domain-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.domain-card-icon {
+  font-size: 26px;
+}
+
+.domain-card-title {
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--teal-d);
+}
+
+.domain-card-desc {
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* ===== 処遇改善加算 ===== */
+.salary {
+  background: white;
+}
+
+.salary-intro {
+  background: linear-gradient(135deg, #E8F8F5, #D4F2EE);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  margin-bottom: 32px;
+  border-left: 5px solid var(--teal);
+}
+
+.salary-intro p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.salary-rate-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 480px) {
+  .salary-rate-grid { grid-template-columns: 1fr; }
+}
+
+.salary-rate-box {
+  background: var(--bg);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid var(--teal);
+}
+
+.salary-rate-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 6px;
+}
+
+.salary-rate-value {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--teal-d);
+  line-height: 1;
+}
+
+.salary-rate-sub {
+  font-size: 11px;
+  color: var(--text-light);
+  margin-top: 4px;
+}
+
+.salary-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.salary-item {
+  background: var(--bg);
+  border-radius: 12px;
+  padding: 22px 24px;
+}
+
+.salary-item-title {
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--teal-d);
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 2px dashed var(--teal);
+}
+
+.salary-item-desc {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+.career-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.career-tag {
+  display: inline-block;
+  background: var(--teal);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* ===== アンケート結果 ===== */
+.questionnaire {
+  background: var(--bg);
+}
+
+.questionnaire-intro {
+  background: white;
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 28px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  text-align: center;
+  border: 2px solid var(--yellow-d);
+}
+
+.questionnaire-intro p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.questionnaire-intro .thank-note {
+  font-size: 14px;
+  color: var(--orange);
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.pdf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.pdf-group-title {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--text);
+  margin: 24px 0 12px;
+  padding-left: 12px;
+  border-left: 4px solid var(--teal);
+}
+
+.pdf-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pdf-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 14px 18px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.pdf-link:hover {
+  border-color: var(--teal);
+  color: var(--teal-d);
+  transform: translateX(3px);
+  box-shadow: 0 2px 8px rgba(59,191,173,0.15);
+}
+
+.pdf-link-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.pdf-notice {
+  margin-top: 24px;
+  background: #FFF9E6;
+  border-radius: 10px;
+  padding: 16px 20px;
+  font-size: 13px;
+  color: var(--text-light);
+  border-left: 4px solid var(--orange);
+  line-height: 1.7;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .header-main {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    padding: 12px 16px 8px;
+    gap: 12px;
+  }
+  .header-right {
+    grid-column: 1 / -1;
+    align-items: flex-start;
+  }
+  .header-btns {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .header-btn {
+    min-width: auto;
+  }
+  .header-hours {
+    text-align: left;
+  }
+  .header-name {
+    font-size: 26px;
+  }
+  .header-recruit {
+    font-size: 14px;
+  }
+}
+@media (max-width: 640px) {
+  .header-main {
+    grid-template-columns: 1fr;
+  }
+  .header-left {
+    text-align: center;
+  }
+  .header-center {
+    text-align: center;
+    align-items: center;
+  }
+  .header-right {
+    align-items: center;
+  }
+  .header-hours {
+    text-align: center;
+  }
+  .nav a {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  .pain-cards { grid-template-columns: 1fr; }
+  .features-grid { grid-template-columns: 1fr; }
+  .staff-grid { grid-template-columns: 1fr; }
+  .fee-steps { grid-template-columns: 1fr; }
+  .float-cta { bottom: 12px; right: 12px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="header-main">
+    <!-- Left: Logo -->
+    <div class="header-left">
+      <img src="logo.png" alt="運動療育むーん" style="height:120px; width:auto;">
+    </div>
+    <!-- Center: Title + Recruit -->
+    <div class="header-center">
+      <span class="header-subtitle">児童発達支援・放課後等デイサービス</span>
+      <span class="header-name">運動療育むーん</span>
+      <a href="https://clients.itszai.jp/4d5463784e6a593d/recruitments/310267?utm_source=https%3A%2F%2Fwww.et-moon.com%2F&utm_source_referrer=%2F4d5463784e6a593d%2Fjob%2F7058" class="header-recruit" target="_blank">一緒に働いてくれるアスリート募集中！</a>
+    </div>
+    <!-- Right: Buttons + Hours -->
+    <div class="header-right">
+      <div class="header-btns">
+        <a href="mailto:undouryoikumoon@gmail.com" class="header-btn">メールにてお問い合わせ</a>
+        <a href="https://lin.ee/rYV3N4V" class="header-btn" target="_blank">公式LINEにてお問い合わせ</a>
+        <a href="tel:0661676091" class="header-btn">お電話にてお問い合わせ</a>
+      </div>
+      <div class="header-hours">
+        <p>営業日：月曜〜土曜　13:00〜19:00</p>
+        <p>おやすみ：日曜・祝日・年末年始</p>
+        <p class="note">※利用希望者様以外のご連絡はお控えください。</p>
+      </div>
+    </div>
+  </div>
+  <nav class="nav">
+    <a href="#facility">施設案内</a>
+    <a href="#program">療育プログラム</a>
+    <a href="#five-domains">5つの領域</a>
+    <a href="#staff">スタッフ紹介</a>
+    <a href="#fee">料金・利用方法</a>
+    <a href="#salary">処遇改善加算等</a>
+    <a href="#questionnaire">アンケート結果</a>
+    <a href="#access">アクセス</a>
+    <a href="#contact">お問い合わせ</a>
+  </nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <img src="hero.png" alt="アスリートから学ぼう！" style="max-width:480px; width:90%; border-radius:16px; margin-bottom:24px;">
+  <div class="hero-btns">
+    <a href="https://lin.ee/rYV3N4V" class="btn-line" target="_blank">💬 LINEで見学予約する</a>
+    <a href="tel:0661676091" class="btn-primary">📞 お電話で問い合わせ</a>
+  </div>
+  <p class="hero-hours">月〜土 13:00〜19:00 ／ 日・祝・年末年始 定休</p>
+</section>
+
+<!-- ===== LITALICO ===== -->
+<section style="background:#FFE566; padding:48px 24px;">
+  <div style="max-width:900px; margin:0 auto; display:flex; align-items:center; justify-content:center; gap:48px; flex-wrap:wrap;">
+    <video controls style="max-width:320px; width:100%; border-radius:12px;" playsinline>
+      <source src="intro.mp4" type="video/mp4">
+    </video>
+    <div style="text-align:center;">
+      <a href="https://h-navi.jp/support_facility/facilities/163633/blogs/467350" target="_blank"
+         style="font-size:22px; font-weight:900; color:#111; text-decoration:underline; display:block; margin-bottom:24px; line-height:1.5;">
+        リタリコ発達ナビにて<br>ブログ公開中！！
+      </a>
+      <a href="https://h-navi.jp/support_facility/facilities/163633/blogs/467350" target="_blank">
+        <img src="litalico-wide.jpg" alt="LITALICO発達ナビ"
+             style="max-width:320px; width:100%; border-radius:12px; background:#fff; padding:16px; box-sizing:border-box;">
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 施設案内 ===== -->
+<section class="pain" id="facility">
+  <div class="section-inner">
+    <h2 class="section-title">施設案内</h2>
+
+    <h3 style="font-size:18px; font-weight:900; margin-bottom:12px;">運動に特化した療育施設</h3>
+    <p style="font-size:15px; line-height:1.9; margin-bottom:32px;">
+      運動療育むーんは、児童発達支援・放課後等デイサービスの中でも運動に特化した療育施設です。「日常生活で身体を動かす際の困りを克服したい！」「身体を思い切り動かしたい！」「運動神経を高めたい！」といった様々な運動に関わるひとりひとりのニーズにお応えするために全力を尽くします。
+    </p>
+
+    <h3 style="font-size:18px; font-weight:900; margin-bottom:12px;">マンツーマンから小集団による指導</h3>
+    <p style="font-size:15px; line-height:1.9; margin-bottom:32px;">
+      一般的な児童発達支援・放課後等デイサービスは、複数の児童・生徒に対し、1人の指導員が対応します。<br>
+      しかし、運動療育むーんでは、１人の指導員がマンツーマンから２、３人の小集団で運動指導・療育を行います。療育の過程から結果までをしっかりと把握し、ひとりひとりの成長・上達スピードに合わせた系統的な指導を心がけます。
+    </p>
+
+    <h3 style="font-size:18px; font-weight:900; margin-bottom:12px;">指導員はアスリート</h3>
+    <p style="font-size:15px; line-height:1.9; margin-bottom:32px;">
+      運動療育むーんの指導員は皆、運動経験豊富なアスリートです。それだけではなく、運動指導経験者、教諭免許保持者など様々な経験をもった運動のプロフェッショナルです。面談でお聞かせ頂いた内容から適切な療育を考えたり、ご要望にお応えさせて頂きます。スタッフの紹介は<a href="#staff" style="color:var(--teal-d); font-weight:700;">こちら</a>でさせて頂いております。
+    </p>
+
+    <!-- 施設写真ギャラリー -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+      <img src="img/interior-03.jpg" alt="施設外観" style="width:100%; border-radius:12px; object-fit:cover; aspect-ratio:3/2; object-position:center 60%; display:block;">
+      <img src="img/interior-01.jpg" alt="施設内部の様子" style="width:100%; border-radius:12px; object-fit:cover; aspect-ratio:3/2; display:block;">
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== PROGRAM ===== -->
+<section class="program" id="program">
+  <div class="section-inner">
+    <h2 class="section-title">療育プログラム</h2>
+
+    <h3 style="font-size:18px; font-weight:900; margin-bottom:12px;">１回５０分間の運動療育</h3>
+    <p style="font-size:15px; line-height:1.9; margin-bottom:32px;">
+      運動療育むーんでは、１回５０分間の運動指導・療育を行います。その際には指導員がマンツーマンで付き添い、トレーニングの過程を見守り、指導します。児童・生徒の成長に合わせてプログラムを柔軟に変更し、ひとりひとりに合った療育を実現します。
+    </p>
+
+    <h3 style="font-size:18px; font-weight:900; margin-bottom:12px;">基本的動作の習得</h3>
+    <p style="font-size:15px; line-height:1.9; margin-bottom:32px;">
+      運動という言葉から、一番に思いつくことはサッカーや陸上等のスポーツだと思います。<br>
+      しかし、運動とは「身体を動かす全てのこと」です。歩いたり、座ったり、立ったり、バランスをとったりすることも運動ですし、ボールを転がす、投げる、受けることも運動です。<br>
+      運動療育むーんでは、そういった「基本的な動作」の習得を大切にしています。基本的な動きを、楽しいトレーニングを通して身につけて欲しいと思います。
+    </p>
+
+    <h3 style="font-size:18px; font-weight:900; margin-bottom:12px;">体力・身体能力の向上</h3>
+    <p style="font-size:15px; line-height:1.9; margin-bottom:32px;">
+      運動療育むーんは、体力や身体能力をアップさせたいというご希望も大歓迎です。基本的な動作を習得しながら、「運動不足を解消したい」「体力をアップさせたい」というご希望にも全力でお応えします。<br>
+      本格的な陸上競技指導など、専門的なトレーニングを提供させて頂くことも可能です。児童・生徒の成長する姿を見ることができるのを楽しみにしています。
+    </p>
+
+    <div id="five-domains" style="scroll-margin-top: 200px;">
+      <h3 style="font-size:18px; font-weight:900; margin-bottom:12px;">５領域に沿った療育プログラム</h3>
+      <p style="font-size:15px; line-height:1.9; margin-bottom:24px;">
+        運動療育は運動能力を高めることはもちろんですが、支援の大きな目的は、子どもが将来日常生活や社会生活を円滑に営めるようにすることです。そのため運動プログラムを通して５領域（【健康・生活】【運動・感覚】【認知・行動】【言語・コミュニケーション】【人間関係・社会性】）の成長も目標としています。
+      </p>
+      <img src="five-domains.png" alt="５領域に沿った療育プログラム" style="max-width:100%; border-radius:12px;">
+    </div>
+  </div>
+</section>
+
+<!-- ===== STAFF ===== -->
+<section class="staff" id="staff">
+  <div class="section-inner">
+    <h2 class="section-title">スタッフ紹介</h2>
+
+    <div class="staff-grid">
+      <div class="staff-card">
+        <span class="staff-role">代表取締役</span>
+        <h3 class="staff-name">荻田 大樹</h3>
+        <p class="staff-name-ruby">おぎた ひろき</p>
+        <p class="staff-desc">競技歴：陸上競技（25年）<br>
+          ・オリンピック日本代表<br>
+          ・世界選手権 3大会 代表<br>
+          ・日本選手権 優勝<br>
+          ・国民体育大会 優勝<br>
+          ・強度行動障害基礎研修修了<br>
+          ・米国認定機関(NESTA)認定 パーソナルトレーナー</p>
+      </div>
+      <div class="staff-card">
+        <span class="staff-role">指導員</span>
+        <h3 class="staff-name">萩尾 脩人</h3>
+        <p class="staff-name-ruby">はぎお しゅうと</p>
+        <p class="staff-desc">競技歴：陸上競技（11年）<br>
+          ・西日本インカレ 優勝<br>
+          ・関西インカレ 優勝<br>
+          ・中・高校保健体育科教員免許</p>
+      </div>
+      <div class="staff-card">
+        <span class="staff-role">指導員</span>
+        <h3 class="staff-name">乾 大輔</h3>
+        <p class="staff-name-ruby">いぬい だいすけ</p>
+        <p class="staff-desc">競技歴：陸上競技（14年）<br>
+          ・インターハイ 3位<br>
+          ・全日本中学 優勝<br>
+          ・関西実業団 3連覇<br>
+          ・小学校教諭1種免許</p>
+      </div>
+      <div class="staff-card">
+        <span class="staff-role">理学療法士</span>
+        <h3 class="staff-name">姫野 万桜</h3>
+        <p class="staff-name-ruby">ひめの まお</p>
+        <p class="staff-desc">競技歴：バドミントン（6年）<br>
+          ・大阪ベスト4<br>
+          ・理学療法士</p>
+      </div>
+      <div class="staff-card">
+        <span class="staff-role">理学療法士</span>
+        <h3 class="staff-name">﨑山 理子</h3>
+        <p class="staff-name-ruby">さきやま りこ</p>
+        <p class="staff-desc">競技歴：バレエ（18年）<br>
+          ・理学療法士</p>
+      </div>
+      <div class="staff-card">
+        <span class="staff-role">児童発達支援管理責任者</span>
+        <h3 class="staff-name">早雲 義孝</h3>
+        <p class="staff-name-ruby">はやくも よしたか</p>
+        <p class="staff-desc">・児童発達支援管理責任者<br>
+          ・レクリエーション中級指導者<br>
+          ・障がい者スポーツ指導員<br>
+          ・幼児体育指導員2級<br>
+          ・行動援護従業者養成研修修了</p>
+      </div>
+      <div class="staff-card">
+        <span class="staff-role">指導員</span>
+        <h3 class="staff-name">北岡 愛華</h3>
+        <p class="staff-name-ruby">きたおか まなか</p>
+        <p class="staff-desc">・行動援護従業者養成研修修了</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RECRUIT ===== -->
+<section style="background:var(--teal); padding:48px 24px; text-align:center;">
+  <h2 style="font-size:24px; font-weight:900; color:#fff; margin-bottom:12px;">一緒に働いてくれるアスリート募集中！</h2>
+  <p style="color:#fff; font-size:15px; margin-bottom:28px;">スタッフ募集要項はこちらからご確認ください。</p>
+  <a href="https://clients.itszai.jp/4d5463784e6a593d/recruitments/310267?utm_source=https%3A%2F%2Fwww.et-moon.com%2F&utm_source_referrer=%2F4d5463784e6a593d%2Fjob%2F7058"
+     target="_blank"
+     style="display:inline-block; background:#fff; color:var(--teal-d); font-size:16px; font-weight:900; padding:14px 36px; border-radius:40px; text-decoration:none;">
+    募集要項を見る
+  </a>
+</section>
+
+<!-- ===== FEE ===== -->
+<section class="fee" id="fee">
+  <div class="section-inner">
+    <h2 class="section-title">児童発達支援・放課後等デイサービスについて</h2>
+    <p style="font-size:15px; line-height:1.9; margin-bottom:32px;">初めての方に向けて、児童発達支援・放課後等デイサービスのご説明をさせていただきます。</p>
+
+    <h3 style="font-size:18px; font-weight:900; margin-bottom:12px;">児童発達支援・放課後等デイサービスとは</h3>
+    <p style="font-size:15px; line-height:1.9; margin-bottom:32px;">
+      児童発達支援は、障がいのある（もしくはその心配のある）未就学児を対象にした通所施設です。0から6歳までの就学前の子どもを対象に療育支援を行います。<br><br>
+      　放課後等デイサービスは、障がいのある（もしくはその心配のある）子どもたちが、放課後や長期休暇中に療育を受ける場として、または、居場所やレスパイトケア（ご家族に代わり一時的にケアを代替する）の充実のために創設された通所施設です。７歳から１８歳までの就学中の方を対象に療育支援を行います。
+    </p>
+
+    <h3 style="font-size:18px; font-weight:900; margin-bottom:12px;">ご利用にあたって「受給者証」が必要です</h3>
+    <p style="font-size:15px; line-height:1.9; margin-bottom:32px;">
+      児童発達支援や放課後等デイサービスなどの「障害児通所支援」を利用するために、お住まいの市区町村から交付される証明書を通所受給者証といいます。（大阪市では、<a href="https://www.city.osaka.lg.jp/fukushi/page/0000371237.html" target="_blank" style="color:var(--teal-d); font-weight:700;">お住まいの区の保健福祉センター保健福祉課</a>で申請手続きすることができます。）<br><br>
+      通所受給者証にはサービス種別、利用する子どもと保護者の住所、氏名、生年月日、サービスの種類、支給量（利用可能日数）、負担上限月額などが記載されます。この受給者証を取得することで、利用料の９割が自治体によって負担され、1割の自己負担でサービスを利用できます。<br><br>
+      　手帳の有無は問わず、こども相談センター、医師等により療育の必要性が認められた児童も施設のご利用が可能です。
+    </p>
+
+    <h3 style="font-size:18px; font-weight:900; margin-bottom:12px;">時間割</h3>
+    <img src="timetable.png" alt="時間割" style="max-width:560px; width:100%; border-radius:12px; margin-bottom:32px;">
+
+    <h3 style="font-size:18px; font-weight:900; margin-bottom:12px;">ご利用料金</h3>
+    <p style="font-size:15px; line-height:1.9; margin-bottom:16px;">
+      受給者証により、サービス料金の原則1割を負担して頂きます。しかし、所定の所得に応じて月額負担額が決められており、1ヶ月分以上の上限額を超えてご利用になられても、それ以上の負担は発生しません。
+    </p>
+    <p style="font-size:15px; line-height:1.9; margin-bottom:8px;">上限額は所得により変化し、</p>
+    <div class="fee-box">
+      <p class="fee-highlight">0円・4,600円・37,200円の3段階です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 処遇改善加算等について ===== -->
+<section class="salary" id="salary">
+  <div class="section-inner">
+    <span class="section-label">処遇改善加算等について</span>
+    <h2 class="section-title">令和8年度 処遇改善加算等の取得状況について</h2>
+
+    <div class="salary-intro">
+      <p>運動療育むーんでは、<strong>福祉・介護職員処遇改善加算（Ⅰ）</strong>と<strong>福祉・介護職員等特定処遇改善加算（Ⅰ）</strong>の両方、介護職員等ベースアップ等支援加算を取得しています。</p>
+    </div>
+
+    <div class="salary-items">
+      <div class="salary-item">
+        <h3 class="salary-item-title">福祉・介護職員処遇改善加算（Ⅰ）</h3>
+        <p class="salary-item-desc">
+          福祉・介護職員の賃金改善のために平成24年に創設され、昇給につながるキャリアアップの制度のしくみを構築し、職員の資質を向上させることや労働環境を整備することで職員の定着をはかることで加算を充実させてきました。<br><br>
+          運動療育むーんでは、キャリアパス要件の（Ⅰ）〜（Ⅲ）を満たしており、職員の資質の向上や労働環境の改善に努めています。
+        </p>
+      </div>
+
+      <div class="salary-item">
+        <h3 class="salary-item-title">福祉・介護職員等特定処遇改善加算（Ⅰ）</h3>
+        <p class="salary-item-desc">
+          現行の福祉・介護職員等特定処遇加算に加え、令和元年度から福祉・介護職員等特定処遇加算が創設されました。従来の処遇改善加算に加え、キャリア（経験・技能）のある職員に対し、さらなる処遇改善を行うものです。<br><br>
+          運動療育むーんでは、主に資格取得者に対し処遇改善を行なっております。
+        </p>
+      </div>
+
+      <div class="salary-item">
+        <h3 class="salary-item-title">職場環境等要件</h3>
+        <p class="salary-item-desc">
+          当法人は、職場環境等要件に関して以下の取り組みを行っています。<br>
+          <span style="font-size:13px; color:var(--text-light);">※添付ファイルを参照ください</span>
+        </p>
+        <a href="https://www.et-moon.com/_files/ugd/dd77a0_49c4448eed0241fe8dbf70d3e02c47ca.pdf" target="_blank" style="display:inline-flex; align-items:center; gap:8px; margin-top:12px; padding:10px 16px; background:#fff; border:1px solid #ddd; border-radius:8px; font-size:14px; color:#333; text-decoration:none;">
+          📄 支援プログラム（参考様式）
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== アンケート結果 ===== -->
+<section class="questionnaire" id="questionnaire">
+  <div class="section-inner">
+    <span class="section-label">アンケート結果</span>
+    <h2 class="section-title">アンケート集計結果</h2>
+
+    <div class="questionnaire-intro">
+      <p>令和８年２月実施のアンケート、自己評価表を公開いたします。</p>
+      <p class="thank-note">ご協力いただきありがとうございました！</p>
+      <p style="font-size:14px; margin-top:8px;">今後もより良い施設作りに取り組んでいきますので、今後とも、よろしくお願いいたします。</p>
+    </div>
+
+    <div class="pdf-links">
+      <a href="pdf/保護者評価_児童発達支援.pdf" class="pdf-link" target="_blank" rel="noopener">
+        <span class="pdf-link-icon">📄</span>
+        保護者等評価（児童発達支援）
+      </a>
+      <a href="pdf/自己評価_児童発達支援.pdf" class="pdf-link" target="_blank" rel="noopener">
+        <span class="pdf-link-icon">📄</span>
+        自己評価（児童発達支援）
+      </a>
+      <a href="pdf/事業所評価_児童発達支援.pdf" class="pdf-link" target="_blank" rel="noopener">
+        <span class="pdf-link-icon">📄</span>
+        事業所評価（児童発達支援）
+      </a>
+      <a href="pdf/保護者評価_放課後等デイサービス.pdf" class="pdf-link" target="_blank" rel="noopener">
+        <span class="pdf-link-icon">📄</span>
+        保護者等評価（放課後等デイサービス）
+      </a>
+      <a href="pdf/自己評価_放課後等デイサービス.pdf" class="pdf-link" target="_blank" rel="noopener">
+        <span class="pdf-link-icon">📄</span>
+        自己評価（放課後等デイサービス）
+      </a>
+      <a href="pdf/事業所評価_放課後等デイサービス.pdf" class="pdf-link" target="_blank" rel="noopener">
+        <span class="pdf-link-icon">📄</span>
+        事業所評価（放課後等デイサービス）
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ACCESS ===== -->
+<section class="access" id="access">
+  <div class="section-inner">
+    <span class="section-label">アクセス</span>
+    <h2 class="section-title">施設案内</h2>
+    <div class="access-grid">
+      <div class="access-info">
+        <div class="access-item">
+          <div class="access-icon">📍</div>
+          <div class="access-detail">
+            <strong>住所</strong>
+            <p>〒534-0012<br>大阪府大阪市都島区御幸町１−６−２２ 2階</p>
+          </div>
+        </div>
+        <div class="access-item">
+          <div class="access-icon">🚇</div>
+          <div class="access-detail">
+            <strong>電車</strong>
+            <p>谷町線 野江内代駅 より徒歩10分<br>谷町線 都島駅 より徒歩15分<br>JR線 城北公園通駅 より徒歩17分</p>
+          </div>
+        </div>
+        <div class="access-item">
+          <div class="access-icon">🚗</div>
+          <div class="access-detail">
+            <strong>お車</strong>
+            <p>近隣コインパーキングをご利用ください</p>
+          </div>
+        </div>
+        <div class="access-item">
+          <div class="access-icon">🕐</div>
+          <div class="access-detail">
+            <strong>営業時間</strong>
+            <p>月曜〜土曜 13:00〜19:00<br>定休日：日曜・祝日・年末年始</p>
+          </div>
+        </div>
+        <div class="access-item">
+          <div class="access-icon">📞</div>
+          <div class="access-detail">
+            <strong>電話</strong>
+            <p><a href="tel:0661676091" style="color:var(--teal-d); font-weight:700; text-decoration:none;">06-6167-6091</a></p>
+          </div>
+        </div>
+        <div class="access-item">
+          <div class="access-icon">🏢</div>
+          <div class="access-detail">
+            <strong>事業所番号</strong>
+            <p>2755220627</p>
+          </div>
+        </div>
+        <div class="access-item">
+          <div class="access-icon">👥</div>
+          <div class="access-detail">
+            <strong>利用定員</strong>
+            <p>10名</p>
+          </div>
+        </div>
+      </div>
+      <div class="access-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.5!2d135.5263!3d34.7025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e8d6b3c3c3c3%3A0x0!2z5aSn5YWr5Lya5a6277GL44KT!5e0!3m2!1sja!2sjp!4v1000000000000"
+          allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta" id="contact">
+  <div class="section-inner">
+    <h2 class="cta-title">まずは見学・お問い合わせから</h2>
+    <p class="cta-desc">
+      「うちの子に合う？」「受給者証の取り方がわからない」<br>
+      どんな小さなことでもお気軽にご相談ください。
+    </p>
+    <div class="cta-btns">
+      <a href="https://lin.ee/rYV3N4V" class="btn-line-w" target="_blank">💬 LINEで気軽に相談する</a>
+      <a href="tel:0661676091" class="btn-white">📞 電話する（06-6167-6091）</a>
+    </div>
+    <p class="cta-note">
+      ※利用希望者様以外のご連絡はお控えください<br>
+      ※月〜土 13:00〜19:00 受付
+    </p>
+  </div>
+</section>
+
+<!-- ===== 情報公表 ===== -->
+<section style="background:#f0f8f7; padding:32px 24px; border-top:2px solid var(--teal);">
+  <div style="max-width:860px; margin:0 auto; text-align:center;">
+    <p style="font-size:13px; color:var(--text-light); margin-bottom:8px;">障害福祉サービス等情報公表システム（WAM NET）にて当事業所の情報を公表しています</p>
+    <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+      <a href="https://www.wam.go.jp/sfkohyoout/COP020100E00.do?_FORMID=COP000101&corporationNumber=A2710200000058&facilityNumber=2755220627&bunjoNumber=000000&serviceType=63&serviceSubNumber=A0000099338"
+         target="_blank"
+         style="display:inline-block; padding:8px 20px; background:white; border:2px solid var(--teal); border-radius:8px; font-size:13px; font-weight:700; color:var(--teal-d); text-decoration:none;">
+        📋 児童発達支援 事業所情報
+      </a>
+      <a href="https://www.wam.go.jp/sfkohyoout/COP020100E00.do?_FORMID=COP000101&corporationNumber=A2710200000058&facilityNumber=2755220627&bunjoNumber=000000&serviceType=64&serviceSubNumber=A0000099338"
+         target="_blank"
+         style="display:inline-block; padding:8px 20px; background:white; border:2px solid var(--teal); border-radius:8px; font-size:13px; font-weight:700; color:var(--teal-d); text-decoration:none;">
+        📋 放課後等デイサービス 事業所情報
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <p class="footer-name">運動療育むーん</p>
+    <div class="footer-info">
+      <p>〒534-0012 大阪府大阪市都島区御幸町１−６−２２ 2階</p>
+      <p>TEL: <a href="tel:0661676091">06-6167-6091</a> ／ MAIL: <a href="mailto:undouryoikumoon@gmail.com">undouryoikumoon@gmail.com</a></p>
+      <p>営業時間: 月〜土 13:00〜19:00 ／ 定休日: 日・祝・年末年始</p>
+      <p>運営: 株式会社MOON</p>
+    </div>
+    <p class="footer-copy">© 2023 運動療育むーん All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- ===== FLOATING CTA ===== -->
+<div class="float-cta">
+  <a href="https://lin.ee/rYV3N4V" class="float-btn line" target="_blank">💬 LINEで相談</a>
+  <a href="tel:0661676091" class="float-btn">📞 電話する</a>
+</div>
+
+<script>
+// ヘッダー高さに合わせてスクロールオフセットを動的に設定
+function updateScrollOffset() {
+  var h = document.querySelector('.header').offsetHeight;
+  document.documentElement.style.scrollPaddingTop = h + 'px';
+  var fd = document.getElementById('five-domains');
+  if (fd) fd.style.scrollMarginTop = h + 'px';
+}
+document.addEventListener('DOMContentLoaded', updateScrollOffset);
+window.addEventListener('resize', updateScrollOffset);
+</script>
+</body>
+</html>
