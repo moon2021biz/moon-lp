@@ -1109,24 +1109,39 @@ footer {
 }
 @media (max-width: 640px) {
   .header-main {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    padding: 8px 12px;
+    gap: 10px;
+    align-items: center;
+  }
+  .header-left img {
+    height: 64px !important;
   }
   .header-left {
-    text-align: center;
+    text-align: left;
   }
   .header-center {
-    text-align: center;
-    align-items: center;
+    text-align: left;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  .header-subtitle {
+    font-size: 10px;
+  }
+  .header-name {
+    font-size: 19px;
+    line-height: 1.2;
+  }
+  .header-recruit {
+    display: none;
   }
   .header-right {
-    align-items: center;
-  }
-  .header-hours {
-    text-align: center;
+    display: none;
   }
   .nav a {
-    padding: 8px 12px;
-    font-size: 12px;
+    padding: 6px 9px;
+    font-size: 11px;
   }
   .pain-cards { grid-template-columns: 1fr; }
   .features-grid { grid-template-columns: 1fr; }
