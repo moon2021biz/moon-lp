@@ -164,6 +164,54 @@ body {
   background: rgba(0,0,0,0.06);
 }
 
+/* ===== HAMBURGER ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  flex-shrink: 0;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: all 0.25s;
+  transform-origin: center;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+/* mobile nav drawer */
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--yellow);
+  border-top: 1px solid rgba(0,0,0,0.08);
+  padding: 8px 0;
+}
+.nav-mobile.open { display: flex; }
+.nav-mobile a {
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  transition: background 0.2s;
+}
+.nav-mobile a:hover { background: rgba(0,0,0,0.06); }
+
 /* ===== HERO ===== */
 .hero {
   background: url('img/interior-02.jpg') center/cover no-repeat;
@@ -1167,7 +1215,7 @@ footer {
 }
 @media (max-width: 640px) {
   .header-main {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto 1fr auto;
     grid-template-rows: auto;
     padding: 8px 12px;
     gap: 10px;
@@ -1197,10 +1245,10 @@ footer {
   .header-right {
     display: none;
   }
-  .nav a {
-    padding: 6px 9px;
-    font-size: 11px;
-  }
+  /* hamburger visible on mobile */
+  .hamburger { display: flex; }
+  /* desktop nav hidden on mobile */
+  .nav { display: none; }
   .pain-cards { grid-template-columns: 1fr; }
   .features-grid { grid-template-columns: 1fr; }
   .staff-grid { grid-template-columns: 1fr; }
@@ -1224,6 +1272,10 @@ footer {
       <span class="header-name">運動療育むーん</span>
       <a href="https://clients.itszai.jp/4d5463784e6a593d/recruitments/310267?utm_source=https%3A%2F%2Fwww.et-moon.com%2F&utm_source_referrer=%2F4d5463784e6a593d%2Fjob%2F7058" class="header-recruit" target="_blank">一緒に働いてくれるアスリート募集中！</a>
     </div>
+    <!-- Hamburger (mobile only) -->
+    <button class="hamburger" id="hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
     <!-- Right: Buttons + Hours -->
     <div class="header-right">
       <div class="header-btns">
@@ -1249,7 +1301,31 @@ footer {
     <a href="#access">アクセス</a>
     <a href="#contact">お問い合わせ</a>
   </nav>
+  <!-- Mobile drawer nav -->
+  <nav class="nav-mobile" id="nav-mobile">
+    <a href="#facility" onclick="closeMobileNav()">施設案内</a>
+    <a href="#program" onclick="closeMobileNav()">療育プログラム</a>
+    <a href="#five-domains" onclick="closeMobileNav()">5つの領域</a>
+    <a href="#staff" onclick="closeMobileNav()">スタッフ紹介</a>
+    <a href="#fee" onclick="closeMobileNav()">料金・利用方法</a>
+    <a href="#salary" onclick="closeMobileNav()">処遇改善加算等</a>
+    <a href="#questionnaire" onclick="closeMobileNav()">アンケート結果</a>
+    <a href="#access" onclick="closeMobileNav()">アクセス</a>
+    <a href="#contact" onclick="closeMobileNav()">お問い合わせ</a>
+  </nav>
 </header>
+<script>
+  var btn = document.getElementById('hamburger');
+  var nav = document.getElementById('nav-mobile');
+  btn.addEventListener('click', function() {
+    btn.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+  function closeMobileNav() {
+    btn.classList.remove('open');
+    nav.classList.remove('open');
+  }
+</script>
 
 <!-- ===== HERO ===== -->
 <section class="hero">
