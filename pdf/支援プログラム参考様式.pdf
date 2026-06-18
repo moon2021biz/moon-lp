@@ -1227,7 +1227,7 @@ footer {
     <!-- Right: Buttons + Hours -->
     <div class="header-right">
       <div class="header-btns">
-        <a href="mailto:undouryoikumoon@gmail.com" class="header-btn">メールにてお問い合わせ</a>
+        <a href="/cdn-cgi/l/email-protection#bacfd4ded5cfc8c3d5d3d1cfd7d5d5d4faddd7dbd3d694d9d5d7" class="header-btn">メールにてお問い合わせ</a>
         <a href="https://lin.ee/rYV3N4V" class="header-btn" target="_blank">公式LINEにてお問い合わせ</a>
         <a href="tel:0661676091" class="header-btn">お電話にてお問い合わせ</a>
       </div>
@@ -1509,7 +1509,7 @@ footer {
           当法人は、職場環境等要件に関して以下の取り組みを行っています。<br>
           <span style="font-size:13px; color:var(--text-light);">※添付ファイルを参照ください</span>
         </p>
-        <a href="pdf/支援プログラム参考様式.pdf" target="_blank" style="display:inline-flex; align-items:center; gap:8px; margin-top:12px; padding:10px 16px; background:#fff; border:1px solid #ddd; border-radius:8px; font-size:14px; color:#333; text-decoration:none;">
+        <a href="https://www.et-moon.com/_files/ugd/dd77a0_49c4448eed0241fe8dbf70d3e02c47ca.pdf" target="_blank" style="display:inline-flex; align-items:center; gap:8px; margin-top:12px; padding:10px 16px; background:#fff; border:1px solid #ddd; border-radius:8px; font-size:14px; color:#333; text-decoration:none;">
           📄 支援プログラム（参考様式）
         </a>
       </div>
@@ -1670,7 +1670,7 @@ footer {
     <p class="footer-name">運動療育むーん</p>
     <div class="footer-info">
       <p>〒534-0012 大阪府大阪市都島区御幸町１−６−２２ 2階</p>
-      <p>TEL: <a href="tel:0661676091">06-6167-6091</a> ／ MAIL: <a href="mailto:undouryoikumoon@gmail.com">undouryoikumoon@gmail.com</a></p>
+      <p>TEL: <a href="tel:0661676091">06-6167-6091</a> ／ MAIL: <a href="/cdn-cgi/l/email-protection#a4d1cac0cbd1d6ddcbcdcfd1c9cbcbcae4c3c9c5cdc88ac7cbc9"><span class="__cf_email__" data-cfemail="394c575d564c4b405650524c54565657795e54585055175a5654">[email&#160;protected]</span></a></p>
       <p>営業時間: 月〜土 13:00〜19:00 ／ 定休日: 日・祝・年末年始</p>
       <p>運営: 株式会社MOON</p>
     </div>
@@ -1684,7 +1684,7 @@ footer {
   <a href="tel:0661676091" class="float-btn">📞 電話する</a>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ヘッダー高さに合わせてスクロールオフセットを動的に設定
 function updateScrollOffset() {
   var h = document.querySelector('.header').offsetHeight;
