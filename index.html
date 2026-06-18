@@ -1394,9 +1394,26 @@ footer {
     <p style="font-size:15px; line-height:1.9; margin-bottom:16px;">
       受給者証により、サービス料金の原則1割を負担して頂きます。しかし、所定の所得に応じて月額負担額が決められており、1ヶ月分以上の上限額を超えてご利用になられても、それ以上の負担は発生しません。
     </p>
-    <p style="font-size:15px; line-height:1.9; margin-bottom:8px;">上限額は所得により変化し、</p>
+    <p style="font-size:15px; line-height:1.9; margin-bottom:16px;">上限額は所得により、以下の3段階です。</p>
     <div class="fee-box">
-      <p class="fee-highlight">0円・4,600円・37,200円の3段階です。</p>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; text-align:center;">
+        <div style="background:white; border-radius:12px; padding:20px 12px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+          <div style="font-size:11px; font-weight:700; color:var(--teal-d); margin-bottom:8px;">非課税世帯</div>
+          <div style="font-size:32px; font-weight:900; color:var(--teal-d); line-height:1;">0</div>
+          <div style="font-size:14px; font-weight:700; color:var(--teal-d);">円</div>
+        </div>
+        <div style="background:white; border-radius:12px; padding:20px 12px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+          <div style="font-size:11px; font-weight:700; color:var(--teal-d); margin-bottom:8px;">一般世帯</div>
+          <div style="font-size:32px; font-weight:900; color:var(--teal-d); line-height:1;">4,600</div>
+          <div style="font-size:14px; font-weight:700; color:var(--teal-d);">円</div>
+        </div>
+        <div style="background:white; border-radius:12px; padding:20px 12px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+          <div style="font-size:11px; font-weight:700; color:var(--teal-d); margin-bottom:8px;">高所得世帯</div>
+          <div style="font-size:32px; font-weight:900; color:var(--teal-d); line-height:1;">37,200</div>
+          <div style="font-size:14px; font-weight:700; color:var(--teal-d);">円</div>
+        </div>
+      </div>
+      <p style="font-size:12px; color:var(--text-light); margin-top:14px; text-align:center;">※月額上限額。これを超える負担は発生しません。</p>
     </div>
   </div>
 </section>
