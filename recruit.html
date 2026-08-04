@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>採用エントリー｜運動療育むーん｜アスリートスタッフ募集</title>
+<meta name="description" content="運動療育むーん（大阪市都島区）のアスリートスタッフ採用エントリーページ。競技で培った力を、子どもたちの「できた！」に。あなたの経験が、次の誰かの人生を動かします。">
+<meta property="og:title" content="採用エントリー｜運動療育むーん｜アスリートスタッフ募集">
+<meta property="og:description" content="競技で培った力を、子どもたちの成長に。運動療育むーんのアスリートスタッフ採用エントリー。">
+<meta property="og:url" content="https://www.et-moon.com/recruit.html">
+<meta property="og:type" content="website">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://www.et-moon.com/recruit.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --yellow: #FFE566;
+  --yellow-d: #F5D800;
+  --orange: #FF8C42;
+  --teal: #3BBFAD;
+  --teal-d: #2FA090;
+  --red: #E8401C;
+  --blue: #4A90D9;
+  --white: #FFFFFF;
+  --bg: #FFFDF0;
+  --text: #333333;
+  --text-light: #666666;
+  --radius: 16px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+/* ===== HEADER ===== */
+.rc-header {
+  background: var(--white);
+  border-bottom: 3px solid var(--teal);
+  position: sticky; top: 0; z-index: 100;
+}
+.rc-header-inner {
+  max-width: 1000px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 20px; gap: 12px;
+}
+.rc-header-left { display: flex; align-items: center; gap: 12px; }
+.rc-header-left img { height: 56px; width: auto; }
+.rc-header-titles { display: flex; flex-direction: column; line-height: 1.25; }
+.rc-header-sub { font-size: 11px; color: var(--text-light); }
+.rc-header-name { font-size: 18px; font-weight: 900; color: var(--teal-d); }
+.rc-back {
+  font-size: 13px; font-weight: 700; color: var(--teal-d);
+  text-decoration: none; border: 2px solid var(--teal); border-radius: 30px;
+  padding: 8px 16px; white-space: nowrap; transition: .2s;
+}
+.rc-back:hover { background: var(--teal); color: #fff; }
+
+/* ===== HERO ===== */
+.rc-hero {
+  background: linear-gradient(135deg, var(--teal) 0%, var(--teal-d) 100%);
+  color: #fff; text-align: center; padding: 64px 24px 56px;
+  position: relative; overflow: hidden;
+}
+.rc-hero::before {
+  content: ""; position: absolute; top: -60px; right: -60px;
+  width: 220px; height: 220px; background: rgba(255,255,255,.12); border-radius: 50%;
+}
+.rc-hero-badge {
+  display: inline-block; background: var(--yellow); color: var(--teal-d);
+  font-size: 13px; font-weight: 900; padding: 6px 18px; border-radius: 30px; margin-bottom: 20px;
+}
+.rc-hero h1 { font-size: 30px; font-weight: 900; line-height: 1.45; margin-bottom: 18px; position: relative; }
+.rc-hero h1 .mark { color: var(--yellow); }
+.rc-hero p { font-size: 15px; opacity: .95; max-width: 620px; margin: 0 auto 28px; position: relative; }
+.rc-hero-cta {
+  display: inline-block; background: var(--orange); color: #fff;
+  font-size: 16px; font-weight: 900; padding: 15px 40px; border-radius: 40px;
+  text-decoration: none; box-shadow: 0 6px 0 #d96a1f; transition: .1s; position: relative;
+}
+.rc-hero-cta:active { transform: translateY(4px); box-shadow: 0 2px 0 #d96a1f; }
+
+/* ===== SECTION ===== */
+.rc-section { max-width: 860px; margin: 0 auto; padding: 56px 24px; }
+.rc-section-label {
+  display: inline-block; background: var(--yellow); color: var(--teal-d);
+  font-size: 12px; font-weight: 900; padding: 4px 14px; border-radius: 20px; margin-bottom: 14px;
+}
+.rc-section h2 {
+  font-size: 24px; font-weight: 900; color: var(--teal-d); margin-bottom: 24px; line-height: 1.4;
+}
+
+/* Message blocks (痛み→常識破壊→理想) */
+.rc-msg { margin-bottom: 22px; }
+.rc-msg .lead {
+  font-size: 19px; font-weight: 900; color: var(--text); line-height: 1.6; margin-bottom: 10px;
+}
+.rc-msg p { font-size: 15px; color: var(--text); }
+.rc-msg .hl { background: linear-gradient(transparent 60%, var(--yellow) 60%); font-weight: 700; }
+
+/* Merit cards */
+.rc-merits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 8px; }
+.rc-merit {
+  background: #fff; border: 2px solid #eee; border-radius: var(--radius);
+  padding: 22px 18px; text-align: center;
+}
+.rc-merit .ico { font-size: 34px; margin-bottom: 10px; }
+.rc-merit h3 { font-size: 15px; font-weight: 900; color: var(--teal-d); margin-bottom: 8px; }
+.rc-merit p { font-size: 13px; color: var(--text-light); line-height: 1.7; }
+
+/* 募集要項 table */
+.rc-outline {
+  background: #fff; border: 2px solid var(--teal); border-radius: var(--radius); overflow: hidden;
+}
+.rc-outline dl { display: flex; flex-wrap: wrap; border-bottom: 1px solid #eee; }
+.rc-outline dl:last-child { border-bottom: none; }
+.rc-outline dt {
+  width: 30%; background: #f4fbfa; font-weight: 700; font-size: 14px;
+  padding: 14px 16px; color: var(--teal-d);
+}
+.rc-outline dd { width: 70%; padding: 14px 16px; font-size: 14px; }
+.rc-note { font-size: 12px; color: var(--text-light); margin-top: 12px; }
+.rc-detail-link {
+  display: inline-block; margin-top: 16px; font-size: 14px; font-weight: 700;
+  color: var(--teal-d); text-decoration: underline;
+}
+
+/* ===== FORM ===== */
+.rc-form-wrap { background: #f4fbfa; }
+.rc-form-section { max-width: 720px; margin: 0 auto; padding: 56px 24px 72px; }
+.rc-form-section h2 { font-size: 24px; font-weight: 900; color: var(--teal-d); text-align: center; margin-bottom: 8px; }
+.rc-form-section .sub { text-align: center; font-size: 14px; color: var(--text-light); margin-bottom: 34px; }
+.rc-form { background: #fff; border-radius: var(--radius); padding: 30px 26px; box-shadow: 0 4px 20px rgba(0,0,0,.05); }
+.rc-fieldset { border: none; margin-bottom: 30px; }
+.rc-fieldset > legend {
+  font-size: 16px; font-weight: 900; color: var(--teal-d);
+  border-left: 5px solid var(--teal); padding-left: 12px; margin-bottom: 18px; width: 100%;
+}
+.rc-field { margin-bottom: 18px; }
+.rc-field label { display: block; font-size: 14px; font-weight: 700; margin-bottom: 7px; }
+.rc-req { color: #fff; background: var(--red); font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; margin-left: 8px; vertical-align: middle; }
+.rc-any { color: var(--text-light); background: #eee; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; margin-left: 8px; vertical-align: middle; }
+.rc-field input[type=text],
+.rc-field input[type=tel],
+.rc-field input[type=email],
+.rc-field input[type=date],
+.rc-field select,
+.rc-field textarea {
+  width: 100%; font-family: inherit; font-size: 15px; color: var(--text);
+  border: 2px solid #ddd; border-radius: 10px; padding: 12px 14px; background: #fff; transition: .15s;
+}
+.rc-field input:focus, .rc-field select:focus, .rc-field textarea:focus {
+  outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(59,191,173,.15);
+}
+.rc-field textarea { resize: vertical; min-height: 110px; }
+.rc-row { display: flex; gap: 14px; }
+.rc-row .rc-field { flex: 1; }
+.rc-radio-group { display: flex; gap: 18px; flex-wrap: wrap; }
+.rc-radio-group label { font-weight: 400; display: flex; align-items: center; gap: 6px; cursor: pointer; }
+.rc-hint { font-size: 12px; color: var(--text-light); margin-top: 5px; }
+.rc-hp { position: absolute; left: -9999px; opacity: 0; height: 0; overflow: hidden; }
+
+.rc-agree { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--text-light); margin-bottom: 22px; }
+.rc-agree input { margin-top: 3px; width: 18px; height: 18px; flex-shrink: 0; }
+.rc-agree a { color: var(--teal-d); text-decoration: underline; }
+
+.rc-submit {
+  width: 100%; background: var(--orange); color: #fff; font-family: inherit;
+  font-size: 18px; font-weight: 900; border: none; border-radius: 40px;
+  padding: 17px; cursor: pointer; box-shadow: 0 5px 0 #d96a1f; transition: .1s;
+}
+.rc-submit:active { transform: translateY(4px); box-shadow: 0 1px 0 #d96a1f; }
+.rc-submit:disabled { background: #bbb; box-shadow: 0 5px 0 #999; cursor: not-allowed; }
+
+.rc-status { text-align: center; font-size: 14px; margin-top: 16px; min-height: 20px; }
+.rc-status.err { color: var(--red); font-weight: 700; }
+
+/* Thank-you */
+.rc-thanks { display: none; text-align: center; padding: 30px 10px; }
+.rc-thanks.show { display: block; }
+.rc-thanks .ico { font-size: 56px; margin-bottom: 14px; }
+.rc-thanks h3 { font-size: 22px; font-weight: 900; color: var(--teal-d); margin-bottom: 14px; }
+.rc-thanks p { font-size: 15px; color: var(--text); margin-bottom: 8px; }
+
+/* ===== FOOTER ===== */
+.rc-footer { background: var(--teal-d); color: #fff; text-align: center; padding: 36px 24px; }
+.rc-footer .fname { font-size: 18px; font-weight: 900; margin-bottom: 12px; }
+.rc-footer p { font-size: 13px; opacity: .95; margin-bottom: 4px; }
+.rc-footer a { color: var(--yellow); }
+.rc-footer .copy { font-size: 11px; opacity: .8; margin-top: 16px; }
+
+@media (max-width: 720px) {
+  .rc-hero h1 { font-size: 24px; }
+  .rc-section h2 { font-size: 21px; }
+  .rc-merits { grid-template-columns: 1fr; }
+  .rc-row { flex-direction: column; gap: 0; }
+  .rc-outline dt, .rc-outline dd { width: 100%; }
+  .rc-outline dt { padding-bottom: 4px; }
+  .rc-header-name { font-size: 15px; }
+  .rc-header-left img { height: 44px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="rc-header">
+  <div class="rc-header-inner">
+    <a class="rc-header-left" href="index.html" style="text-decoration:none;">
+      <img src="logo.png" alt="運動療育むーん">
+      <span class="rc-header-titles">
+        <span class="rc-header-sub">児童発達支援・放課後等デイサービス</span>
+        <span class="rc-header-name">運動療育むーん</span>
+      </span>
+    </a>
+    <a class="rc-back" href="index.html">← トップページへ</a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="rc-hero">
+  <span class="rc-hero-badge">アスリートスタッフ募集中</span>
+  <h1>競技で積み上げたその力は、<br><span class="mark">子どもの「できた！」</span>に変わる。</h1>
+  <p>運動療育むーんでは、一緒に子どもたちの成長を支えてくれるアスリートを募集しています。まずはあなたのことを、少しだけ教えてください。</p>
+  <a href="#entry" class="rc-hero-cta">エントリーする</a>
+</section>
+
+<!-- ===== MESSAGE（痛み→常識破壊→理想）===== -->
+<section class="rc-section">
+  <span class="rc-section-label">アスリートのあなたへ</span>
+  <h2>「競技を続けてきただけの自分に、何ができるんだろう」</h2>
+
+  <div class="rc-msg">
+    <p class="lead">引退が近づくほど、ふと不安になる。</p>
+    <p>これまで競技一本で走ってきた。でも「その経験、社会で通用するの？」と聞かれると言葉に詰まる——そんな焦りを、多くのアスリートが抱えています。</p>
+  </div>
+
+  <div class="rc-msg">
+    <p class="lead">でも、それは<span class="hl">大きな勘違い</span>です。</p>
+    <p>あなたが当たり前にやってきた「うまくいかない日でも工夫して前に進む」「小さな成長を見逃さず声をかける」「体で手本を見せる」——この力こそ、子どもの療育の現場で最も必要とされているものです。資格や経験より、あなたが競技で培った"姿勢そのもの"が武器になります。</p>
+  </div>
+
+  <div class="rc-msg">
+    <p class="lead">目の前の子が、初めて跳び箱を跳べた瞬間。</p>
+    <p>「先生みたいになりたい」と言われる日。あなたの一言で、その子の一日が、やがて人生が変わっていく。競技で得たものを、次の世代に手渡す仕事が、ここにあります。</p>
+  </div>
+</section>
+
+<!-- ===== MERITS ===== -->
+<section class="rc-section" style="padding-top:0;">
+  <div class="rc-merits">
+    <div class="rc-merit">
+      <div class="ico">🏅</div>
+      <h3>競技経験が活きる</h3>
+      <p>運動に特化した療育。あなたの実技指導力がそのまま価値になります。</p>
+    </div>
+    <div class="rc-merit">
+      <div class="ico">🌱</div>
+      <h3>未経験から学べる</h3>
+      <p>療育の知識はゼロでもOK。先輩スタッフと一緒に現場で身につけられます。</p>
+    </div>
+    <div class="rc-merit">
+      <div class="ico">🤝</div>
+      <h3>競技と両立しやすい</h3>
+      <p>勤務時間・形態はご相談可能。現役を続けながら働く仲間もいます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 募集要項 ===== -->
+<section class="rc-section" style="padding-top:0;">
+  <span class="rc-section-label">募集要項</span>
+  <h2>募集の概要</h2>
+  <div class="rc-outline">
+    <dl><dt>職種</dt><dd>児童指導員／運動療育スタッフ（アスリート採用）</dd></dl>
+    <dl><dt>仕事内容</dt><dd>運動を通じた児童発達支援・放課後等デイサービスでの療育サポート（運動プログラムの実施・子どもたちの見守り・記録など）</dd></dl>
+    <dl><dt>雇用形態</dt><dd>正社員／パート・アルバイト／業務委託 ※ご希望を伺って相談の上決定</dd></dl>
+    <dl><dt>勤務地</dt><dd>大阪市都島区御幸町１−６−２２ 2階（運動療育むーん）</dd></dl>
+    <dl><dt>勤務時間</dt><dd>月〜土 13:00〜19:00 の範囲でシフト相談（定休：日・祝・年末年始）</dd></dl>
+    <dl><dt>求める人物</dt><dd>競技経験のある方／子どもと関わることが好きな方（競技種目・レベルは問いません）</dd></dl>
+  </div>
+  <p class="rc-note">※給与・待遇などの詳細な条件は、募集要項ページをご確認いただくか、エントリー後に個別にご案内いたします。</p>
+  <a class="rc-detail-link" href="https://clients.itszai.jp/4d5463784e6a593d/recruitments/310267?utm_source=https%3A%2F%2Fwww.et-moon.com%2F&utm_source_referrer=%2F4d5463784e6a593d%2Fjob%2F7058" target="_blank" rel="noopener">詳しい募集要項を見る →</a>
+</section>
+
+<!-- ===== ENTRY FORM ===== -->
+<div class="rc-form-wrap" id="entry">
+  <div class="rc-form-section">
+    <h2>採用エントリーフォーム</h2>
+    <p class="sub">下記フォームよりご応募ください。担当者より折り返しご連絡いたします。</p>
+
+    <form class="rc-form" id="rcForm" novalidate>
+      <!-- 基本情報 -->
+      <fieldset class="rc-fieldset">
+        <legend>基本情報</legend>
+        <div class="rc-row">
+          <div class="rc-field">
+            <label>お名前<span class="rc-req">必須</span></label>
+            <input type="text" name="name" autocomplete="name" required placeholder="例）山田 太郎">
+          </div>
+          <div class="rc-field">
+            <label>ふりがな<span class="rc-req">必須</span></label>
+            <input type="text" name="kana" required placeholder="例）やまだ たろう">
+          </div>
+        </div>
+        <div class="rc-row">
+          <div class="rc-field">
+            <label>生年月日<span class="rc-any">任意</span></label>
+            <input type="date" name="birthday">
+          </div>
+          <div class="rc-field">
+            <label>性別<span class="rc-any">任意</span></label>
+            <div class="rc-radio-group" style="padding-top:10px;">
+              <label><input type="radio" name="gender" value="男性">男性</label>
+              <label><input type="radio" name="gender" value="女性">女性</label>
+              <label><input type="radio" name="gender" value="回答しない">回答しない</label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- 連絡先 -->
+      <fieldset class="rc-fieldset">
+        <legend>連絡先</legend>
+        <div class="rc-row">
+          <div class="rc-field">
+            <label>電話番号<span class="rc-req">必須</span></label>
+            <input type="tel" name="tel" autocomplete="tel" required placeholder="例）090-1234-5678">
+          </div>
+          <div class="rc-field">
+            <label>メールアドレス<span class="rc-req">必須</span></label>
+            <input type="email" name="email" autocomplete="email" required placeholder="例）example@email.com">
+          </div>
+        </div>
+        <div class="rc-field">
+          <label>お住まい（市区町村）<span class="rc-any">任意</span></label>
+          <input type="text" name="area" placeholder="例）大阪市都島区">
+        </div>
+      </fieldset>
+
+      <!-- 運動歴 -->
+      <fieldset class="rc-fieldset">
+        <legend>運動歴</legend>
+        <div class="rc-field">
+          <label>これまでの運動歴・スポーツ経験<span class="rc-req">必須</span></label>
+          <textarea name="sports_history" required placeholder="例）小学校からサッカー、中学・高校では陸上部（短距離）。現在も市民ランナーとして活動中 など"></textarea>
+          <p class="rc-hint">取り組んできた競技・種目・期間などを自由にご記入ください。</p>
+        </div>
+      </fieldset>
+
+      <!-- 競技歴・実績 -->
+      <fieldset class="rc-fieldset">
+        <legend>競技歴・実績</legend>
+        <div class="rc-row">
+          <div class="rc-field">
+            <label>主な競技・種目<span class="rc-any">任意</span></label>
+            <input type="text" name="sport" placeholder="例）陸上競技（100m）">
+          </div>
+          <div class="rc-field">
+            <label>現役／引退<span class="rc-any">任意</span></label>
+            <select name="active_status">
+              <option value="">選択してください</option>
+              <option value="現役">現役</option>
+              <option value="引退">引退</option>
+              <option value="その他">その他</option>
+            </select>
+          </div>
+        </div>
+        <div class="rc-field">
+          <label>最高成績・競技レベル<span class="rc-any">任意</span></label>
+          <input type="text" name="best_record" placeholder="例）全国大会出場、〇〇選手権 準優勝 など">
+        </div>
+      </fieldset>
+
+      <!-- 希望条件・志望動機 -->
+      <fieldset class="rc-fieldset">
+        <legend>希望条件・志望動機</legend>
+        <div class="rc-row">
+          <div class="rc-field">
+            <label>希望職種<span class="rc-any">任意</span></label>
+            <select name="desired_role">
+              <option value="">選択してください</option>
+              <option value="児童指導員・運動療育スタッフ">児童指導員・運動療育スタッフ</option>
+              <option value="保育士">保育士</option>
+              <option value="児童発達支援管理責任者">児童発達支援管理責任者</option>
+              <option value="その他・まだ決まっていない">その他・まだ決まっていない</option>
+            </select>
+          </div>
+          <div class="rc-field">
+            <label>希望勤務形態<span class="rc-any">任意</span></label>
+            <select name="employment_type">
+              <option value="">選択してください</option>
+              <option value="正社員">正社員</option>
+              <option value="パート・アルバイト">パート・アルバイト</option>
+              <option value="業務委託">業務委託</option>
+              <option value="未定・相談したい">未定・相談したい</option>
+            </select>
+          </div>
+        </div>
+        <div class="rc-field">
+          <label>保有資格<span class="rc-any">任意</span></label>
+          <input type="text" name="license" placeholder="例）保育士、教員免許、幼稚園教諭、なし など">
+        </div>
+        <div class="rc-field">
+          <label>志望動機・自己PR<span class="rc-any">任意</span></label>
+          <textarea name="motivation" placeholder="志望のきっかけや、あなたの強み・伝えたいことなどご自由にどうぞ。"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- honeypot（スパム対策・触らない） -->
+      <div class="rc-hp" aria-hidden="true">
+        <label>この欄は空のままにしてください<input type="text" name="_hp" tabindex="-1" autocomplete="off"></label>
+      </div>
+
+      <label class="rc-agree">
+        <input type="checkbox" id="rcAgree" required>
+        <span>ご記入いただいた個人情報は、採用選考および採用に関するご連絡の目的にのみ利用します。上記に同意します。</span>
+      </label>
+
+      <button type="submit" class="rc-submit" id="rcSubmit">この内容でエントリーする</button>
+      <div class="rc-status" id="rcStatus"></div>
+    </form>
+
+    <!-- Thank-you -->
+    <div class="rc-thanks" id="rcThanks">
+      <div class="ico">🎉</div>
+      <h3>エントリーありがとうございます！</h3>
+      <p>ご応募を受け付けました。</p>
+      <p>担当者より、3営業日以内にご連絡いたします。今しばらくお待ちください。</p>
+      <p style="margin-top:18px;"><a class="rc-back" href="index.html">← トップページへ戻る</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="rc-footer">
+  <p class="fname">運動療育むーん</p>
+  <p>〒534-0012 大阪市都島区御幸町１−６−２２ 2階</p>
+  <p>TEL: <a href="tel:0661676091">06-6167-6091</a> ／ MAIL: <a href="mailto:undouryoikumoon@gmail.com">undouryoikumoon@gmail.com</a></p>
+  <p>営業時間: 月〜土 13:00〜19:00 ／ 定休日: 日・祝・年末年始 ／ 運営: 株式会社MOON</p>
+  <p class="copy">© 2023 運動療育むーん All Rights Reserved.</p>
+</footer>
+
+<script>
+// ▼▼▼ むーん採用管理アプリの応募受付URL（デプロイ後に確定）▼▼▼
+var API_ENDPOINT = "https://moon-recruit.pages.dev/api/apply";
+// ▲▲▲ 独自ドメイン等に変えた場合はここを差し替え ▲▲▲
+
+(function () {
+  var form   = document.getElementById('rcForm');
+  var btn    = document.getElementById('rcSubmit');
+  var status = document.getElementById('rcStatus');
+  var thanks = document.getElementById('rcThanks');
+
+  function setErr(msg) { status.textContent = msg; status.className = 'rc-status err'; }
+  function clearErr()  { status.textContent = ''; status.className = 'rc-status'; }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    clearErr();
+
+    // honeypot（bot が埋めたら無言で中断）
+    if (form._hp.value) { return; }
+
+    if (!form.checkValidity()) {
+      setErr('未入力の必須項目があります。ご確認ください。');
+      form.reportValidity();
+      return;
+    }
+    if (!document.getElementById('rcAgree').checked) {
+      setErr('個人情報の取り扱いへの同意が必要です。');
+      return;
+    }
+    if (!API_ENDPOINT) {
+      setErr('送信先が未設定です。恐れ入りますが、お電話（06-6167-6091）またはメールにてお問い合わせください。');
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = '送信中…';
+
+    var data = new FormData(form);
+    data.delete('_hp');
+    data.append('_source', 'et-moon.com/recruit');
+
+    fetch(API_ENDPOINT, { method: 'POST', body: data })
+      .then(function (r) { return r.json().catch(function () { return { ok: r.ok }; }); })
+      .then(function (j) {
+        if (j && j.ok === false) { throw new Error(j.error || 'error'); }
+        form.style.display = 'none';
+        thanks.classList.add('show');
+        thanks.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      })
+      .catch(function () {
+        btn.disabled = false;
+        btn.textContent = 'この内容でエントリーする';
+        setErr('送信に失敗しました。通信環境をご確認のうえ、もう一度お試しください。解決しない場合はお電話ください。');
+      });
+  });
+})();
+</script>
+</body>
+</html>
