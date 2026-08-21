@@ -1261,7 +1261,10 @@ footer {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["ChildCare", "LocalBusiness"],
+      "@type": [
+        "ChildCare",
+        "LocalBusiness"
+      ],
       "@id": "https://www.et-moon.com/#facility",
       "name": "運動療育むーん",
       "alternateName": "うんどうりょういくむーん",
@@ -1275,26 +1278,51 @@ footer {
       "priceRange": "受給者証利用・自己負担は世帯所得に応じた月額上限あり",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "御幸町1-6-22 2階",
+        "streetAddress": "御幸町1-6-22 ECビル2階",
         "addressLocality": "大阪市都島区",
         "addressRegion": "大阪府",
         "postalCode": "534-0012",
         "addressCountry": "JP"
       },
-      "openingHoursSpecification": [{
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "13:00",
-        "closes": "19:00"
-      }],
-      "areaServed": [
-        { "@type": "AdministrativeArea", "name": "大阪市都島区" },
-        { "@type": "AdministrativeArea", "name": "大阪市旭区" },
-        { "@type": "AdministrativeArea", "name": "大阪市城東区" },
-        { "@type": "City", "name": "大阪市" }
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "13:00",
+          "closes": "19:00"
+        }
       ],
-      "parentOrganization": { "@id": "https://www.et-moon.com/#org" },
-      "employee": { "@id": "https://www.et-moon.com/#ogita" },
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "大阪市都島区"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "大阪市旭区"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "大阪市城東区"
+        },
+        {
+          "@type": "City",
+          "name": "大阪市"
+        }
+      ],
+      "parentOrganization": {
+        "@id": "https://www.et-moon.com/#org"
+      },
+      "employee": {
+        "@id": "https://www.et-moon.com/#ogita"
+      },
       "sameAs": [
         "https://h-navi.jp/support_facility/facilities/163633",
         "https://www.instagram.com/undouryouikumoon/"
@@ -1310,7 +1338,9 @@ footer {
               "name": "児童発達支援",
               "serviceType": "児童発達支援",
               "description": "0〜6歳の未就学児を対象とした、運動に特化した療育支援です。1回50分・基本的にマンツーマンで、5領域（健康・生活／運動・感覚／認知・行動／言語・コミュニケーション／人間関係・社会性）に沿って行います。",
-              "provider": { "@id": "https://www.et-moon.com/#facility" },
+              "provider": {
+                "@id": "https://www.et-moon.com/#facility"
+              },
               "audience": {
                 "@type": "PeopleAudience",
                 "suggestedMinAge": 0,
@@ -1325,7 +1355,9 @@ footer {
               "name": "放課後等デイサービス",
               "serviceType": "放課後等デイサービス",
               "description": "7〜18歳の就学中のお子さんを対象とした、放課後・長期休暇中の療育支援です。1回50分・基本的にマンツーマンの運動療育に加え、居場所づくりとレスパイトケアの役割も担っています。",
-              "provider": { "@id": "https://www.et-moon.com/#facility" },
+              "provider": {
+                "@id": "https://www.et-moon.com/#facility"
+              },
               "audience": {
                 "@type": "PeopleAudience",
                 "suggestedMinAge": 7,
@@ -1349,9 +1381,17 @@ footer {
       "name": "荻田 大樹",
       "alternateName": "おぎた ひろき",
       "jobTitle": "代表取締役",
-      "worksFor": { "@id": "https://www.et-moon.com/#org" },
+      "worksFor": {
+        "@id": "https://www.et-moon.com/#org"
+      },
       "description": "株式会社MOON代表取締役。陸上競技・棒高跳の元選手で、オリンピック日本代表、世界選手権3大会代表、日本選手権優勝、国民体育大会優勝の経歴を持ちます。NESTA認定パーソナルトレーナー、行動援護従業者養成研修修了、強度行動障害基礎研修修了。",
-      "knowsAbout": ["運動療育", "児童発達支援", "放課後等デイサービス", "陸上競技", "パーソナルトレーニング"]
+      "knowsAbout": [
+        "運動療育",
+        "児童発達支援",
+        "放課後等デイサービス",
+        "陸上競技",
+        "パーソナルトレーニング"
+      ]
     },
     {
       "@type": "WebSite",
@@ -1359,7 +1399,9 @@ footer {
       "url": "https://www.et-moon.com/",
       "name": "運動療育むーん",
       "inLanguage": "ja",
-      "publisher": { "@id": "https://www.et-moon.com/#org" }
+      "publisher": {
+        "@id": "https://www.et-moon.com/#org"
+      }
     },
     {
       "@type": "FAQPage",
@@ -1410,7 +1452,15 @@ footer {
           "name": "場所とアクセスを教えてください。",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "大阪府大阪市都島区御幸町1-6-22の2階です。Osaka Metro谷町線の野江内代駅から徒歩10分、都島駅から徒歩15分、JRおおさか東線の城北公園通駅から徒歩17分です。お車の場合は近隣のコインパーキングをご利用ください。"
+            "text": "大阪府大阪市都島区御幸町1-6-22 ECビル2階です。Osaka Metro谷町線の野江内代駅から徒歩10分、都島駅から徒歩15分、JRおおさか東線の城北公園通駅から徒歩17分です。お車の場合は近隣のコインパーキングをご利用ください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "送迎はありますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "送迎は行っておりません。保護者の方の送り迎えをお願いしています。Osaka Metro谷町線の野江内代駅から徒歩10分、都島駅から徒歩15分です。お車の場合は近隣のコインパーキングをご利用ください。"
           }
         },
         {
@@ -1822,7 +1872,7 @@ footer {
           <div class="access-icon">📍</div>
           <div class="access-detail">
             <strong>住所</strong>
-            <p>〒534-0012<br>大阪府大阪市都島区御幸町１−６−２２ 2階</p>
+            <p>〒534-0012<br>大阪府大阪市都島区御幸町１−６−２２ ECビル2階</p>
           </div>
         </div>
         <div class="access-item">
@@ -1922,7 +1972,7 @@ footer {
   <div class="footer-inner">
     <p class="footer-name">運動療育むーん</p>
     <div class="footer-info">
-      <p>〒534-0012 大阪府大阪市都島区御幸町１−６−２２ 2階</p>
+      <p>〒534-0012 大阪府大阪市都島区御幸町１−６−２２ ECビル2階</p>
       <p>TEL: <a href="tel:0661676091">06-6167-6091</a> ／ MAIL: <a href="mailto:undouryoikumoon@gmail.com">undouryoikumoon@gmail.com</a></p>
       <p>営業時間: 月〜土 13:00〜19:00 ／ 定休日: 日・祝・年末年始</p>
       <p>運営: 株式会社MOON</p>
