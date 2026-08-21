@@ -1,0 +1,41 @@
+# 運動療育むーん（株式会社MOON） https://www.et-moon.com/
+# 検索エンジン・AI検索エンジンによる参照を歓迎します。
+
+User-agent: *
+Allow: /
+
+# --- AI検索・生成エンジン（明示的に許可） ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://www.et-moon.com/sitemap.xml
