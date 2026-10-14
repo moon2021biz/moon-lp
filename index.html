@@ -46,9 +46,35 @@ body {
 .header {
   background: var(--yellow);
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
+}
+/* 固定ヘッダーの分だけ本文を下げる（高さは下の script が実測して上書き） */
+body { padding-top: 200px; }
+.header-logo { height: 120px; width: auto; display: block; transition: height .3s ease; }
+.header-main, .header-name, .header-recruit, .nav a { transition: padding .3s ease, font-size .3s ease; }
+.header.no-anim, .header.no-anim * { transition: none !important; }
+@media (max-width: 640px) { body { padding-top: 84px; } }
+
+/* スクロールしたら細いヘッダーにする（PC・タブレット） */
+@media (min-width: 641px) {
+  .header.is-compact .header-main { padding: 6px 32px; gap: 16px; }
+  .header.is-compact .header-logo { height: 48px; }
+  .header.is-compact .header-subtitle,
+  .header.is-compact .header-hours { display: none; }
+  .header.is-compact .header-center { flex-direction: row; align-items: baseline; gap: 18px; flex-wrap: wrap; }
+  .header.is-compact .header-name { font-size: 22px; }
+  .header.is-compact .header-recruit { font-size: 13px; }
+  .header.is-compact .header-btns { flex-direction: row; gap: 6px; }
+  .header.is-compact .header-btn { min-width: auto; padding: 4px 10px; font-size: 11.5px; }
+  .header.is-compact .nav a { padding: 6px 18px; }
+}
+@media (min-width: 641px) and (max-width: 1100px) {
+  /* 幅が狭いときは、細いヘッダーでは問い合わせボタンを隠す（右下の LINE・電話ボタンが常に出ている） */
+  .header.is-compact .header-right { display: none; }
 }
 
 .header-main {
@@ -1484,7 +1510,7 @@ footer {
   <div class="header-main">
     <!-- Left: Logo -->
     <div class="header-left">
-      <a href="#" aria-label="トップへ戻る"><img src="logo.png" alt="運動療育むーん" style="height:120px; width:auto;"></a>
+      <a href="#" aria-label="トップへ戻る"><img src="logo.png" alt="運動療育むーん" class="header-logo"></a>
     </div>
     <!-- Center: Title + Recruit -->
     <div class="header-center">
@@ -1982,15 +2008,38 @@ footer {
 </div>
 
 <script>
-// ヘッダー高さに合わせてスクロールオフセットを動的に設定
-function updateScrollOffset() {
-  var h = document.querySelector('.header').offsetHeight;
-  document.documentElement.style.scrollPaddingTop = h + 'px';
-  var fd = document.getElementById('five-domains');
-  if (fd) fd.style.scrollMarginTop = h + 'px';
-}
-document.addEventListener('DOMContentLoaded', updateScrollOffset);
-window.addEventListener('resize', updateScrollOffset);
+// ヘッダー：上にいるときは大きく、スクロールしたら細くする。
+// ヘッダーは固定表示なので、本文の上の余白＝大きいときの高さ。ページ内リンクの止まる位置＝細いときの高さ。
+(function () {
+  var header = document.querySelector('.header');
+  var full = 0, slim = 0, compact = false;
+  function measure() {
+    header.classList.add('no-anim');
+    var was = header.classList.contains('is-compact');
+    header.classList.remove('is-compact');
+    full = header.offsetHeight;
+    header.classList.add('is-compact');
+    slim = header.offsetHeight;
+    if (!was) header.classList.remove('is-compact');
+    void header.offsetHeight;
+    header.classList.remove('no-anim');
+    document.body.style.paddingTop = full + 'px';
+    document.documentElement.style.scrollPaddingTop = slim + 'px';
+    var fd = document.getElementById('five-domains');
+    if (fd) fd.style.scrollMarginTop = slim + 'px';
+  }
+  function onScroll() {
+    var y = window.scrollY || window.pageYOffset;
+    // 行き来でちらつかないよう、細くする位置と戻す位置をずらす
+    if (!compact && y > 120) { compact = true; header.classList.add('is-compact'); }
+    else if (compact && y < 40) { compact = false; header.classList.remove('is-compact'); }
+  }
+  function init() { measure(); onScroll(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+  window.addEventListener('load', measure);
+  window.addEventListener('resize', measure);
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
 </script>
 </body>
 </html>
